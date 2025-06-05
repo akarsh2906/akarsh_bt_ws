@@ -46,3 +46,44 @@ The locations are set in the "station_locations.yaml" file present in the "confi
 **autonomy_node.cpp** which is responsible for creating and ticking the behavior tree.
 **navigation_behaviors.cpp** which contains all the functionality for the BT nodes implemented.
 **battery_sim_node.cpp** which simulates the battery percentage reducing and also charging using a ros2 service.
+
+
+
+
+## Behavior Tree
+
+    <root main_tree_to_execute = "MainTree" >
+        <BehaviorTree ID="MainTree">
+            <Fallback name="main_logic">
+                <Repeat num_cycles="1000">
+    
+                    <Sequence name="main_sequence">
+    
+                        <Fallback name="battery_check">
+                            <Sequence name="battery_ok_sequence">
+                                <CheckBattery/>
+                                <AlwaysSuccess/>
+                            </Sequence>
+                            <Sequence name="go_charge_sequence">
+                                <GoToPose name="go_to_charger" loc="charging_station" />
+                                <SimulateCharging/>
+                                <AlwaysSuccess/>
+                            </Sequence>
+                        </Fallback>
+    
+                        <GoToPose name="go_to_station_A" loc="station_A" />
+                        <PickItem/>
+                        <GoToPose name="go_to_station_B" loc="station_B" />
+                        <DropItem/>
+    
+                        <GoToPose name="go_to_station_C" loc="station_C" />
+                        <PickItem/>
+                        <GoToPose name="go_to_station_A2" loc="station_A" />
+                        <DropItem/>
+    
+                    </Sequence>
+    
+                </Repeat>
+            </Fallback>
+        </BehaviorTree>
+    </root>
