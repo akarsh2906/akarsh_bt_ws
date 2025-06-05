@@ -6,10 +6,10 @@ This repository is a ros2 workspace consisting of packages to simulate and contr
 https://drive.google.com/file/d/1-gM_xgbaBwFRFHjFdm1s99qfZk8QfYt5/view?usp=sharing
 
 ## Dependencies:
-ROS2 Humble
-Gazebo Classic
-Nav2
-behaviortree_cpp_v3
+ROS2 Humble <br>
+Gazebo Classic <br>
+Nav2 <br>
+behaviortree_cpp_v3 <br>
 
 ## Setup
 Clone the repository "akarsh_bt_ws" repository:
