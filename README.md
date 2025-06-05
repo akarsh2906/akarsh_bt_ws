@@ -2,8 +2,8 @@
 # AMR BT Simulation
 
 This repository is a ros2 workspace consisting of packages to simulate and control an AMR using behavior trees. Tested using **ROS2 Humble** and **Gazebo 11** running on Ubuntu 22.04.
-## [Demonstration Video](https://drive.google.com/file/d/1-gM_xgbaBwFRFHjFdm1s99qfZk8QfYt5/view?usp=sharing)
-https://drive.google.com/file/d/1-gM_xgbaBwFRFHjFdm1s99qfZk8QfYt5/view?usp=sharing
+## [Demonstration Video](https://drive.google.com/file/d/1-OMdFcoZkzwHtkgLssOYRnjfcqrfORH2/view?usp=sharing)
+https://drive.google.com/file/d/1-OMdFcoZkzwHtkgLssOYRnjfcqrfORH2/view?usp=sharing
 
 ## Dependencies:
 ROS2 Humble <br>
